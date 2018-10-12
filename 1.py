@@ -1,4 +1,4 @@
-if __name__ == '__main__':
+f __name__ == '__main__':
 
     a = 11
     b = 12
