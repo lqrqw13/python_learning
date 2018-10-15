@@ -1,0 +1,49 @@
+import time
+from time import sleep
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from progressbar import ProgressBar
+
+
+with open('1.txt','r') as f:
+    pbar = ProgressBar()
+    for line in pbar(f):
+        username= line
+        chrome_options = Options()
+        chrome_options.add_argument('--headless')
+        chrome_options.add_argument('--no-sandbox')
+        driver = webdriver.Chrome("/usr/bin/chromedriver", chrome_options=chrome_options, service_args=['--verbose', '--log-path=/tmp/chromedriver.log'])
+        driver.get('http://research.bakclass.com/match/teamDetail?match_id=12&team_info_id=8497#0-sqq-1-27627-9737f6f9e09dfaf5d3fd14d775bfee85')
+        wait = WebDriverWait(driver, 5)
+         
+         
+        driver.find_element_by_css_selector("#headerLoginBtn").click()
+
+
+        time.sleep(2)
+         
+        driver.find_element_by_css_selector('#passwd_login_account_id').send_keys('{}'.format(username))
+        driver.find_element_by_css_selector('#passwd_login_pwd_id').send_keys('123456')
+        time.sleep(1)
+
+        driver.find_element_by_css_selector("#login_element_id > div:nth-child(1) > div:nth-child(4) > button").click()
+        time.sleep(5)
+         
+        try:
+            #wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, wait.until(EC.presence_of_element_located((By.CSS_SELECTOR, 'body > div.wrap > div.wrap-content > div > div.about > div.about-intro > div.about-title > h5 > dd:nth-child(4) > i'))))))
+            driver.find_elements_by_css_selector('body > div.wrap > div.wrap-content > div > div.about > div.about-intro > div.about-title > h5 > dd:nth-child(4) > i')[0].click()
+            time.sleep(10)
+            driver.find_elements_by_css_selector('body > div.wrap > div.wrap-content > div > div.about > div.about-intro > div.about-title > h5 > dd:nth-child(4) > i')[0].click()
+            time.sleep(10)
+            driver.find_elements_by_css_selector('body > div.wrap > div.wrap-content > div > div.about > div.about-intro > div.about-title > h5 > dd:nth-child(4) > i')[0].click()
+            time.sleep(10)
+            driver.find_elements_by_css_selector('#btnsig')[0].click()
+            time.sleep(10)
+        except:
+            pass
+			
+        driver.quit()
+exit()
