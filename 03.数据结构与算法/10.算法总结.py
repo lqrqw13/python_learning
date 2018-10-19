@@ -14,7 +14,9 @@
 # 从0下标开始，i和i+1比较，交换位置，把最大数排到最后
 def bubble_sort(alist):
     n = len(alist)
+    # 内循环走一次找到一个最大数，找到n-1个最大数即可，也就是循环执行n-1次
     for j in range(0, n-1):
+        # range后面的一个位置是动态变化的，所以是n-1-j
         for i in range(0, n-1-j):
             if alist[i] > alist[i+1]:
                 alist[i], alist[i+1] = alist[i+1], alist[i]
@@ -94,3 +96,32 @@ def fast_sort(alist, start, end):
 if __name__ == "__main__":
     li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
     print('快速排序：', fast_sort(li, 0 , len(li)-1))
+
+'''归并排序'''
+def merge_sort(alist):
+    n = len(alist)
+    if n <=1:
+        return alist
+    mid_index = n//2
+    # left 采用归并排序后形成的有序的新的列表
+    left_li = merge_sort(alist[:mid_index])
+    # right 采用归并排序后形成的有序的新的列表
+    right_li = merge_sort(alist[mid_index:])
+    left_pointer, right_pointer = 0, 0
+    # 保存返回新表的元素
+    result = []
+    while left_pointer<len(left_li) and right_pointer < len(right_li):
+        if left_li[left_pointer]< right_li[right_pointer]:
+            result.append(left_li[left_pointer])
+            left_pointer +=1
+        else:
+            result.append(right_li[right_pointer])
+            right_pointer +=1
+
+    result += left_li[left_pointer:]
+    result += right_li[right_pointer:]
+    return result
+
+if __name__ == "__main__":
+    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print('归并排序：', merge_sort(li))
