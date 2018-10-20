@@ -22,9 +22,7 @@ def bubble_sort(alist):
                 alist[i], alist[i+1] = alist[i+1], alist[i]
     return alist
 
-if __name__ == "__main__":
-     li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-     print('冒泡排序：' ,bubble_sort(li))
+
 
 '''选择排序'''
 # 从0下标开始，设min_index = 0, i和i+1, i+2, ...n-1比较，记录最小数下标,然后交换位置
@@ -38,10 +36,6 @@ def select_sort(alist):
         alist[j], alist[min_index] = alist[min_index], alist[j]
     return alist
 
-
-if __name__ == "__main__":
-    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    print('选择排序：', select_sort(li))
 
 
 '''插入排序'''
@@ -57,9 +51,6 @@ def insert_sort(alist):
                 break
     return alist
 
-if __name__ == "__main__":
-    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    print('插入排序：', insert_sort(li))
 
 
 '''希尔排序'''
@@ -90,12 +81,10 @@ def fast_sort(alist, start, end):
     # 将基准元素放到该位置
     alist[i] = mid
 
-    fast_sort(alist, start, i-1) # i-1和i执行结果一样？
+    fast_sort(alist, start, i-1)
     fast_sort(alist, i+1, end)
     return alist
-if __name__ == "__main__":
-    li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-    print('快速排序：', fast_sort(li, 0 , len(li)-1))
+
 
 '''归并排序'''
 def merge_sort(alist):
@@ -122,6 +111,43 @@ def merge_sort(alist):
     result += right_li[right_pointer:]
     return result
 
+'''二分查找法递归法'''
+def binary_search_1(alist, item):
+    n = len(alist)
+    if n <= 0:
+        return False
+    mid = n//2
+    if item == alist[mid]:
+        return True
+    elif item> alist[mid]:
+        return binary_search_1(alist[mid+1:], item)
+    else:
+        return binary_search_1(alist[:mid], item)
+
+'''二分查找法循环法'''
+def binary_search_2(alist, item):
+    n = len(alist)
+    start = 0
+    end = n-1
+    while start <=end:
+        mid = (start+end)//2
+        if item == alist[mid]:
+            return True
+        elif item > alist[mid]:
+            start = mid+1
+        else:
+            end = mid -1
+    return False
+
+
 if __name__ == "__main__":
     li = [54, 26, 93, 17, 77, 31, 44, 55, 20]
+    print('冒泡排序：' ,bubble_sort(li))
+    print('选择排序：', select_sort(li))
+    print('插入排序：', insert_sort(li))
+    print('快速排序：', fast_sort(li, 0 , len(li)-1))
     print('归并排序：', merge_sort(li))
+    alist = [17, 20, 26, 31, 44, 54, 55, 77, 93]
+    print('二分查找法递归法：', binary_search_1(alist, 20))
+    print('二分查找法循环法：', binary_search_2(alist, 30))
+
