@@ -2,13 +2,7 @@ class Node(object):
     def __init__(self,elem):
         self.elem = elem
         self.next = None
-
         
-class SingleList(object):
-    '''单链表'''
-    def __init__(self, node = None):
-        self.head = node
-
     def is_empty(self):
         '''判断是否为空'''
         return self.head == None

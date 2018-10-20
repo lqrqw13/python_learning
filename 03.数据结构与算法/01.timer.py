@@ -1,9 +1,4 @@
-from timeit import Timer
 
-li = []
-
-def test1():
-	for i in range(10000):
 		li.append(i)
 
 
