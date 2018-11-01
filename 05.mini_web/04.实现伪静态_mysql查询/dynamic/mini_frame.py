@@ -90,7 +90,6 @@ def application(env, start_response):
         print(file_name)
         func = URL_FUNC_DICT[file_name]
         return func()
-        return
     except Exception as ret:
         return "产生了异常：%s" % str(ret)
 
