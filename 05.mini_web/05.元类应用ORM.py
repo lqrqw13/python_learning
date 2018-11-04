@@ -20,10 +20,6 @@ class ModelMetaclass(type):
 
 
 class Model(metaclass = ModelMetaclass):
-    uid = ('uid', "int unsigned")
-    name = ('username', "varchar(30)")
-    email = ('email', "varchar(30)")
-    password = ('password', "varchar(30)")
     # 当指定元类之后，以上的类属性将不在类中，而是在__mappings__属性指定的字典中存储
     # 以上User类中有 
     # __mappings__ = {
