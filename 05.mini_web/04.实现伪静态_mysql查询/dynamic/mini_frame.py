@@ -57,7 +57,7 @@ def index():
     content = re.sub(r"\{%content%\}", html, content)
 
     return content
-     
+
 
 @route("/center.html")
 def center():
@@ -73,7 +73,7 @@ def center():
 
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/html;charset=utf-8')])
-    
+
     file_name = env['PATH_INFO']
     # file_name = "/index.py"
 
@@ -90,13 +90,5 @@ def application(env, start_response):
         print(file_name)
         func = URL_FUNC_DICT[file_name]
         return func()
-        return
     except Exception as ret:
         return "产生了异常：%s" % str(ret)
-
-
-
-
-
-
-
