@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    .menu{
+      height:50px;
+      width:694px;
+      margin:50px auto;
+      /*解决内联块元素中间的间隙*/
+      font-size: 0px;
+    }
+    .menu a{
+      text-decoration: none;
+      display: inline-block;
+      height: 48px;
+      width:98px;
+      border:1px solid gold;
+      /*解决内联块元素中间的间隙*/
+      font-size: 16px;
+      /*解决边框重合问题*/
+      margin-right: -1px;
+      text-align: center;
+      /*垂直且中*/
+      line-height: 48px;
+    }
+    .menu a:hover{
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+<div class="menu">
+  <a href="">首页</a>
+  <a href="">公司简介</a>
+  <a href="">解决方案</a>
+  <a href="">公司新闻</a>
+  <a href="">行业动态</a>
+  <a href="">招贤纳才</a>
+  <a  href="">联系我们</a>
+</div>
+
+</body>
+</html>

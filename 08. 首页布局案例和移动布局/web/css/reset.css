@@ -1,0 +1,26 @@
+body, h1, h2, h3, h4, h5, h6, p, ul, dt, dl, form, input, li{
+    margin:0;
+    padding:0;
+    font-family:'Microsoft Yahei';
+    color:#666;
+    font-size:12px;
+}
+
+
+.clearfix:before, .clearfix:after{
+    content: '';
+    display: table;
+}
+
+.clearfix:after{
+    clear:both;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
