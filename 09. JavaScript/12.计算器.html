@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+    <script>
+       window.onload = function(){
+           var a = document.getElementById('input01');
+           var b = document.getElementById('input02');
+           var compute = document.getElementById('compute');
+           var btn = document.getElementById('btn');
+           btn.onclick = function(){
+                if(a.value==''||b.value==''){
+                    alert('不能为空');
+                    return;
+                }
+                else if(isNaN(a.value)||isNaN(b.value)){
+                    alert('输入不合法')
+                    return;
+                }
+                   switch(compute.value){
+                       case '+':
+                            alert('计算结果是'+(parseFloat(a.value)*100+parseFloat(b.value)*100)/100)
+                            break;
+                        case '-':
+                            alert('计算结果是'+(parseFloat(a.value)*100-parseFloat(b.value)*100)/100)
+                            break
+                       case '*':
+                            alert('计算结果是'+(parseFloat(a.value)*100)*(parseFloat(b.value)*100)/10000);
+                            break;
+                        case '/':
+                            alert('计算结果是'+((parseFloat(a.value)*100)/(parseFloat(b.value)*100)))
+                            break
+                   }
+           }
+       } 
+    </script>
+</head>
+<body>
+   <input type="text" id='input01'> 
+   <select name="" id="compute">
+       <option value="+">+</option>
+       <option value="-">-</option>
+       <option value="*">*</option>
+       <option value="/">/</option>
+   </select>
+   <input type="text" id='input02'>
+   <input type="button" value="计算" id='btn'>
+</body>
+</html>

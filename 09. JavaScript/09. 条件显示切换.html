@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            background: gold;
+            margin:200px auto;
+        }
+    </style>
+    <script>
+        window.onload = function (){
+            var oBox = document.getElementById('box');
+            var oBtn = document.getElementById('btn');
+            oBtn.onclick=function(){
+                //默认会去找行间样式，第一次会是空
+                if (oBox.style.display == 'block'||oBox.style.display == ''){
+                    oBox.style.display = 'none';
+                }
+                else{
+                    oBox.style.display='block';
+                    }
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="button" id='btn' name='' value='switch'>
+    <div id="box"></div>
+    
+</body>
+</html>

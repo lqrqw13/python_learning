@@ -89,6 +89,42 @@
         .img:hover span{
             transform: perspective(800px) rotateY(0deg);
         }
+        @keyframes spining{
+            from{
+                transform:rotate(0deg);
+            }
+            to{
+                transform:rotate(360deg);
+            }
+        }
+        @keyframes walking{
+            from{
+                left:0px;
+            }
+            to{
+                left:-960px;
+            }
+        }
+        .spin{
+            width:400px;
+            height:400px;
+            margin:100px auto;
+            animation: spining 1s linear infinite;
+        }
+        .walk_con{
+            width:120px;
+            height:182px;
+            margin:0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .walk_con img{
+            display: block;
+            position: absolute;
+            left: 0px;
+            top:0px;
+            animation: walking 1s steps(8) infinite;
+        }
 
 
     </style>
@@ -109,7 +145,15 @@
     </div>
     <div class="img">
         <img src="images/adv01.jpg" alt="ad1">
-        <span>asfafsdasfasdfqweqewr</span>
+        <span>翻页效果</span>
     </div>
+    <div class="spin">
+        <img src="images/fengche.png" alt="goods">
+    </div>
+
+    <div class="walk_con">
+        <img src="images/walking.png" alt="walkning">
+    </div>
+
 </body>
 </html>

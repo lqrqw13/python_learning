@@ -1,0 +1,242 @@
+.main_wrap{
+    position: absolute;
+    right:0;
+    bottom:0;
+    left: 0;
+    top:0;
+    background: #efefef;
+}
+
+
+.header{
+    height: 2.5rem;
+    background-color: #37ab40;
+    position: relative;
+}
+
+.logo{
+    display: block;
+    width:4.45rem;
+    height: 1.775rem;
+    margin:.35rem auto;
+}
+.logo img{
+    width: 100%;
+}
+.search{
+    position: absolute;
+    width: 1.35rem;
+    height:1.35rem;
+    right:0.75rem;
+    top:.6rem;
+    background:url(../images/icons.png) no-repeat;
+    background-size: 3rem 42rem;
+}
+
+.center_con{
+    position: absolute;
+    left:0;
+    right:0;
+    top:2.5rem;
+    bottom:2.5rem;
+    overflow-x:hidden;
+    overflow-y: auto;
+}
+
+.slider{
+    height:7rem;
+    background: lightgreen;
+}
+
+.slider img{
+    width: 100%;
+}
+.menu_con{
+    height: 9.25rem;
+    background:#fff;
+    margin-top:0.5rem;
+    overflow: hidden;
+}
+.menu_con ul{
+    width:18rem;
+    height:8.375rem;
+    margin:0.875rem 0 0 1.375rem;
+}
+
+.menu_con li{
+    width:2.8rem;
+    height:4.05rem;
+    float:left;
+    margin-right:1.625rem;
+    
+}
+
+.menu_con a{
+    display:block;
+    height:2.8rem;
+    background:url(../images/icons.png) left -3.025rem no-repeat;
+    background-size: 3.0rem 42rem;
+}
+
+.menu_con li:nth-child(2) a{
+    background-position: left -6rem;
+}
+.menu_con li:nth-child(3) a{
+    background-position: left -9rem;
+}
+.menu_con li:nth-child(4) a{
+    background-position: left -12rem;
+}
+.menu_con li:nth-child(5) a{
+    background-position: left -15rem;
+}
+.menu_con li:nth-child(6) a{
+    backghtround-position: left -18rem;
+}
+.menu_con li:nth-child(7) a{
+    background-position: left -21rem;
+}
+.menu_con li:nth-child(8) a{
+    background-position: left -24rem;
+}
+.menu_con h2{
+    font:bold 13px/1.25rem 'Microsoft Yahei';
+    text-align:center;
+}
+
+.common_model{
+    height:17.25rem;
+    margin:0.5rem 0 0.5rem;
+    background: #fff;
+}
+
+.common_title{
+    width:17.75rem;
+    height:.9rem;
+    margin: .8rem auto 0;
+}
+
+.common_title h3{
+    float: left;
+    height: 0.9rem;
+    font:bold 15px/0.9rem 'Microsoft Yahei';
+    color:#fbc83d;
+    border-left:0.25rem solid #fbc83d;
+    text-indent: .4rem;
+}
+
+.common_title a{
+    float: right;
+    /* 必须指明字体，否则font属性不生效,例：font:bold 12px/0.9rem */
+    font: 12px/0.9rem 'Microsfot Yahei';
+    color:#7f7f7f;
+}
+
+.banner{
+    display:block;
+    width:17.75rem;
+    height: 4.5rem;
+    margin:0.5rem auto 0;
+}
+
+.banner img{
+    width:100%
+}
+
+.goods_list{
+    width:17.8rem;
+    height:9.325rem;
+    margin:0.5rem auto 0;
+}
+.goods_list li{
+    position:relative;
+    width:5.9rem;
+    height:9.325rem;
+    border-right:1px solid #e7e7e7;
+    float:left;
+}
+
+.goods_list li:last-child{
+    border-right: 0px;
+}
+
+.goods_link{
+    display:block;
+    width:4.5rem;
+    height:4.5rem;
+    margin:0.375rem auto 0;
+}
+.goods_link img{
+    width:100%
+}
+
+.goods_list h4{
+    font:normal 15px/15px 'Microsoft Yahei';
+    width:5.0rem;
+    margin:0.925rem auto 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+
+.unit{
+    width:5rem;
+    font:normal 12px/12px 'Microsoft Yahei';
+    margin:0.8rem auto 0;
+    color:#bbb;
+}
+.price{
+    width:5rem;
+    font:normal 12px/12px 'Microsoft Yahei';
+    margin:0.5rem auto 0;
+    color:#ff4400;
+
+}
+.add_cart{
+    position:absolute;
+    width:1.7rem;
+    height:1.7rem;
+    right:0.675rem;
+    bottom: 0;
+    background:url(../images/icons.png) left -27.0rem no-repeat;
+    background-size: 3.0rem 42rem;
+}
+.footer{
+    width: 100%;
+    height:2.5rem;
+    position: absolute;
+    left:0;
+    bottom:0;
+    background: gold
+}
+
+.footer li{
+    width:25%;
+    heigh:2.5rem;
+    float:left;
+}
+
+.footer a{
+    display: block;
+    width:1.3rem;
+    height:1.3rem;
+    margin:.35rem auto 0;
+    background:url(../images/icons.png) left -30.0rem no-repeat;
+    background-size: 3.0rem 42rem;
+}
+
+.footer li:nth-child(2) a{
+    background-position: left -33rem;
+}
+.footer li:nth-child(3) a{
+    background-position: left -36rem;
+}
+.footer li:nth-child(4) a{
+    background-position: left -39rem;
+}
+
+.footer li h2{
+    font:normal 12px/0.75rem 'Microsoft Yahei';
+    color:#949392;
+    text-align:center;
+}

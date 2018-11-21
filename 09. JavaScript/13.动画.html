@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js动画</title>
+    <style>
+        #box{
+            width:200px;
+            height:200px;
+            background:yellow;
+            position: fixed;
+            left:100px;
+            top:100px
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var oBox = document.getElementById('box')
+            left = 100;
+            setInterval(function(){
+                left +=2;
+                oBox.style.left = left + 'px';
+            },30)
+        }
+    </script>
+</head>
+<body>
+   <div id="box"></div> 
+</body>
+</html>

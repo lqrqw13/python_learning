@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload=function(){
+            // class特殊，需要写className
+            var oDiv = document.getElementById('div1');
+            var attr = 'color';
+            oDiv.style[attr]='red';
+            // 通过innerHTML可以读写元素包裹的内容
+            alert(oDiv.innerHTML);
+
+            var oDiv2 = document.getElementById('div2');
+            oDiv2.innerHTML="hello"
+        }
+    </script>
+</head>
+<body>
+    
+    <div id='div1'>这是一个div元素</div>
+    <div id="div2"></div>
+</body>
+</html>

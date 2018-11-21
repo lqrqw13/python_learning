@@ -1,0 +1,25 @@
+.header{
+    height: 50px;
+    background-color: #37ab40;
+    position: relative;
+}
+.logo{
+    display: block;
+    width:89px;
+    height:35.5px;
+    margin:7.25px auto;
+}
+.logo img{
+    width: 89px;
+    height: 35.5px;
+    line-height: 50px;
+}
+.search{
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    right:15px;
+    top:12px;
+    background:url(../images/icons.png) no-repeat;
+    background-size: 60px 840px;
+}
