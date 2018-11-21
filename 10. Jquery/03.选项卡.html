@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+       $(function(){
+           var $oBtns = $('.btns input');
+           var $oDivs = $('.cons div');
+           $oBtns.click(function(){
+               $(this).addClass('current').siblings().removeClass('current');
+               $oDivs.eq($(this).index()).addClass('active').siblings().removeClass('active');
+               
+           })
+       }) 
+    </script>
+    <style>
+        .btns input{
+            width: 100px;
+            height:40px;
+            background-color:#666;
+            border:0px;
+        }
+
+        .btns .current{
+            background-color:gold;
+
+        }
+
+        .cons div{
+            width:400px;
+            height: 200px;
+            background-color:gold;
+            display: none
+        }
+
+        .cons .active{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="btns">
+        <input type="button" class="current" value='btn1'>
+        <input type="button" value='btn2'>
+        <input type="button" value='btn3'>
+    </div>
+    <div class="cons">
+        <div class="active">1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+</body>
+</html>
